@@ -1,0 +1,11 @@
+{
+  "name": "node-alpha",
+  "description": "Node version of an alpha prototype",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.4.4",
+    "mu2": "0.5.19",
+    "mu2express": "0.0.1"
+  }
+}
