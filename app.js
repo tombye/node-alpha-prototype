@@ -7,7 +7,7 @@ app.set('view engine', 'mustache');
 app.set('views', __dirname + '/templates');
 
 app.get('/', function (req, res) {
-  res.render('index', {
+  res.render('govuk_template', {
     'locals': {
       'name': 'world'
     }
