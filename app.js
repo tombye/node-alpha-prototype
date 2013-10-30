@@ -5,6 +5,7 @@ var express = require('express'),
 app.engine('mustache', mu2Express.engine);
 app.set('view engine', 'mustache');
 app.set('views', __dirname + '/templates');
+app.use('/assets', express.static(__dirname + '/assets'));
 
 app.get('/', function (req, res) {
   res.render('govuk_template', {
