@@ -115,3 +115,372 @@ Example usage:
 }
 
 */
+/* Taken from:
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/fonts.scss
+*/
+/* The below comment needs a ! so that the copyright message doesn't get removed during the minification step. See: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#comments */
+/* Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
+@font-face {
+  font-family: 'nta';
+  src: asset_data_url("NTA-Light-20130221.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nta';
+  src: asset_data_url("NTA-Bold-20130221.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ntatabularnumbers';
+  src: asset_data_url("NTATabularNumbers-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ntatabularnumbers';
+  src: asset_data_url("NTATabularNumbers-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+/* Taken from:
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/core.scss#L20
+*/
+/* line 19, application.scss */
+main#content {
+  margin: 0 auto;
+  max-width: auto;
+  position: relative;
+  display: block;
+}
+@media (min-width: 641px) {
+  /* line 19, application.scss */
+  main#content {
+    max-width: 1020px;
+  }
+}
+
+/* Core styles */
+/* line 36, application.scss */
+p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 36, application.scss */
+  p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 41, application.scss */
+article,
+header.page-header {
+  margin: 0 32px;
+}
+
+/* line 45, application.scss */
+header.page-header {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+/* line 49, application.scss */
+header.page-header h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  /* line 49, application.scss */
+  header.page-header h1 {
+    font-size: 32px;
+    line-height: 1.09375;
+  }
+}
+
+/* line 54, application.scss */
+article h1 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  /* line 54, application.scss */
+  article h1 {
+    font-size: 18px;
+    line-height: 1.11111;
+  }
+}
+@media (min-width: 641px) {
+  /* line 54, application.scss */
+  article h1 {
+    padding-top: 4px;
+    padding-bottom: 6px;
+  }
+}
+
+/* line 59, application.scss */
+article h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 9px;
+  padding-bottom: 6px;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  /* line 59, application.scss */
+  article h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 641px) {
+  /* line 59, application.scss */
+  article h2 {
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+}
+
+/* Taken from:
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss#L98
+*/
+/* line 68, application.scss */
+article li {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-left: 16px;
+  padding-left: 0;
+}
+@media (max-width: 640px) {
+  /* line 68, application.scss */
+  article li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 641px) {
+  /* line 68, application.scss */
+  article li {
+    margin: 0.25em 0;
+    padding-left: 0.3em;
+  }
+}
+
+/* line 79, application.scss */
+article ul, article ol {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+@media (min-width: 641px) {
+  /* line 79, application.scss */
+  article ul, article ol {
+    padding-left: 1em;
+  }
+}
+
+/* line 90, application.scss */
+article ul {
+  list-style-type: circle;
+  list-style-image: url("/assets/images/bullet-disc-5px.gif");
+}
+
+/* line 95, application.scss */
+article ol {
+  list-style-type: decimal;
+}
+
+/* Taken from:
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss#L585
+*/
+/* line 102, application.scss */
+article ol.steps {
+  padding-left: 0;
+  margin-left: 0;
+  overflow: hidden;
+}
+/* line 107, application.scss */
+article ol.steps > li {
+  background-position: 0 0.87em;
+  background-repeat: no-repeat;
+  list-style-type: decimal;
+  margin-left: 0;
+  padding: 0.75em 0 0.75em 2.2em;
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(1) {
+  background-image: url("/assets/images/icon-step-1.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(1) {
+    background-image: image-url("icon-step-1-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(2) {
+  background-image: url("/assets/images/icon-step-2.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(2) {
+    background-image: image-url("icon-step-2-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(3) {
+  background-image: url("/assets/images/icon-step-3.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(3) {
+    background-image: image-url("icon-step-3-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(4) {
+  background-image: url("/assets/images/icon-step-4.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(4) {
+    background-image: image-url("icon-step-4-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(5) {
+  background-image: url("/assets/images/icon-step-5.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(5) {
+    background-image: image-url("icon-step-5-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(6) {
+  background-image: url("/assets/images/icon-step-6.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(6) {
+    background-image: image-url("icon-step-6-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(7) {
+  background-image: url("/assets/images/icon-step-7.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(7) {
+    background-image: image-url("icon-step-7-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(8) {
+  background-image: url("/assets/images/icon-step-8.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(8) {
+    background-image: image-url("icon-step-8-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(9) {
+  background-image: url("/assets/images/icon-step-9.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(9) {
+    background-image: image-url("icon-step-9-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(10) {
+  background-image: url("/assets/images/icon-step-10.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(10) {
+    background-image: image-url("icon-step-10-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(11) {
+  background-image: url("/assets/images/icon-step-11.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(11) {
+    background-image: image-url("icon-step-11-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(12) {
+  background-image: url("/assets/images/icon-step-12.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(12) {
+    background-image: image-url("icon-step-12-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(13) {
+  background-image: url("/assets/images/icon-step-13.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(13) {
+    background-image: image-url("icon-step-13-2x.png");
+    background-size: 24px 24px;
+  }
+}
+/* line 115, application.scss */
+article ol.steps > li:nth-child(14) {
+  background-image: url("/assets/images/icon-step-14.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 115, application.scss */
+  article ol.steps > li:nth-child(14) {
+    background-image: image-url("icon-step-14-2x.png");
+    background-size: 24px 24px;
+  }
+}

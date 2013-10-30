@@ -8,9 +8,14 @@ app.set('views', __dirname + '/templates');
 app.use('/assets', express.static(__dirname + '/assets'));
 
 app.get('/', function (req, res) {
-  res.render('govuk_template', {
+  res.render('article', {
     'locals': {
-      'name': 'world'
+      'items' : [
+        { 'name': 'item 1' },
+        { 'name': 'item 2' },
+        { 'name': 'item 3' },
+        { 'name': 'item 4' }
+      ]
     }
   });
 });
