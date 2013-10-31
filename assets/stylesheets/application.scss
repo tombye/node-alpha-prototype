@@ -7,13 +7,17 @@
 @import "_font_stack";
 @import "design-patterns/_buttons";
 
-/* Taken from:
+/* GOV.UK mainstream styles, from either of:
+https://github.com/alphagov/static
+https://github.com/alphagov/frontend
+
+/* Taken from (whole file):
 https://github.com/alphagov/static/blob/master/app/assets/stylesheets/fonts.scss
 */
 @import "fonts";
 
 /* Taken from:
-https://github.com/alphagov/static/blob/master/app/assets/stylesheets/core.scss#L20
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/core.scss
 */
 
 main#content {
@@ -31,38 +35,11 @@ main#content {
   }
 }
 
-/* Core styles */
-
-p {
-  @include core-19;
-}
-
-article,
-header.page-header {
-  margin: 0 32px;
-}
-
-header.page-header {
-  padding-top: 1em;
-  padding-bottom: 2em;
-
-  h1 {
-    @include bold-48;
-  }
-}
-
-article h1 {
-  @include heading-27;
-  font-weight: 600;
-}
-
-article h2 {
-  @include heading-24;
-  font-weight: 600;
-}
-
 /* Taken from:
-https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss#L98
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss
+
+As viewed on:
+https://www.gov.uk/get-a-child-passport
 */
 
 article li {
@@ -97,7 +74,10 @@ article ol {
 }
 
 /* Taken from:
-https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss#L585
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss
+
+As viewed on
+https://www.gov.uk/apply-gender-recognition-certificate/applying-to-the-gender-recognition-panel
 */
 article ol.steps {
   padding-left: 0;
@@ -127,4 +107,152 @@ article ol.steps {
       padding-left: 0;
     }
   }
+}
+/* Taken from:
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss#L585
+
+As viewed on
+https://www.gov.uk/apply-gender-recognition-certificate/applying-to-the-gender-recognition-panel
+*/
+article .application-notice {
+  padding: 0.1em 0 0.1em 1em;
+  margin: 1em 0 1.5em 0;
+
+  @include media(tablet) {
+    margin: 0;
+  }
+}
+
+article .info-notice {
+  background: none;
+  border-left: 10px #DEE0E2 solid;
+  margin-bottom: 1em;
+  @extend %contain-floats;
+}
+
+article .help-notice {
+  background:none;
+  background: url("/assets/images/icon-important.png") no-repeat scroll 0 0.5em;
+
+  @include device-pixel-ratio() {
+    background-image: url("/assets/images/icon-important-2x.png");
+    background-size: 34px 34px;
+  }
+
+  p {
+    font-weight:600;
+
+    a {
+      font-weight:600;
+    }
+  }
+}
+
+article .help-notice p {
+  padding: 0 1em 0 2em;
+}
+
+article p + .help-notice,
+article p + .info-notice {
+  margin-top: 2em;
+}
+
+article .info-notice a[rel="external"] {
+  display: inline;
+}
+
+/* Taken from:
+https://github.com/alphagov/static/blob/master/app/assets/stylesheets/text.scss
+
+As viewed on:
+https://www.gov.uk/bank-holidays
+*/
+article table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em 0 2em 0;
+  width: 100%;
+
+  caption {
+    @include bold-24;
+    margin: 0.4em 0.5em 0.4em 0.7em;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  @include media(tablet) {
+    margin: 1em -1em 2em -1em;
+    width: 105.95%;
+  }
+}
+
+article th, article td {
+  @include core-16;
+  vertical-align: top;
+  padding: 0.7em 0.5em 0.7em 1em;
+
+  a[rel="external"] {
+    @include external-link-14;
+    @include media(tablet) {
+      @include external-link-16;
+    }
+  }
+}
+
+article tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+article td {
+  background: #EAEDEF;
+  border: dotted 1px #B8C6CC;
+
+  small {
+    @include core-16;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  article th, article td, article td small {
+    font-size: 10px;
+  }
+}
+
+article th {
+  line-height: 1.25em;
+  text-align: left;
+  color: #0B0C0C;
+  font-weight: 700;
+  background-color: #DEE0E2;
+  border: solid 1px #A1ACB2;
+}
+
+/* Styles local to this prototype */
+
+p {
+  @include core-19;
+}
+
+article,
+header.page-header {
+  margin: 0 32px;
+}
+
+header.page-header {
+  padding-top: 1em;
+  padding-bottom: 2em;
+
+  h1 {
+    @include bold-48;
+  }
+}
+
+article h1 {
+  @include heading-27;
+  font-weight: 600;
+}
+
+article h2 {
+  @include heading-24;
+  font-weight: 600;
 }
